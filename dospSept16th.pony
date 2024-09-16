@@ -1,21 +1,6 @@
 use "collections"
 use "time"
 
-actor Main
-  new create(env: Env) =>
-    try
-      let args = env.args
-      let n = args(1)?.i64()?
-      let k = args(2)?.i64()?
-      
-      let boss = Boss(n, k, env)
-      env.out.print(n.string()) 
-      env.out.print(k.string())
-      boss.distribute_tasks()
-    else
-      env.out.print("Value of n and k has to be given in arguments") 
-    end
-
 actor Boss
   let _n: I64
   let _k: I64
@@ -47,18 +32,20 @@ actor Boss
 
     var beg_index: I64 = 1
 
-    // Check if either n or work_units is odd
+
+    // Distribution of work based on the odd or even workers in performance
+    // If work units are odd, there will chunk remaining after distributing equally
+    // The remaining chunk is added into a new interval range
     if (((_n % 2) != 0) or ((work_units % 2) != 0)) and (remainder != 0) then
-      // Apply sliding window by adjusting the last chunk
       for i in Range[I64](0, work_units - 1) do
         let end_index: I64 = (i + 1) * chunk_size
         task_intervals.push((beg_index, end_index))
         beg_index = end_index + 1
       end
-      // Adjust last range to include all remaining elements
+      // Adding new interval to include all remaining elements
       task_intervals.push((beg_index, _n))
     else
-      // Evenly distribute if both are even
+      // No chunks will be left for even number of work units
       for i in Range[I64](0, work_units) do
         let end_index: I64 = (i + 1) * chunk_size
         task_intervals.push((beg_index, end_index))
@@ -68,6 +55,7 @@ actor Boss
 
     for i in task_intervals.values() do
       let worker = Worker(this, _env)
+      // taking beginning and ending index for each worker
       worker.perform_task(i._1, i._2, _k)
     end
 
@@ -127,3 +115,20 @@ fun square_root_func(number: I64): I64 =>
 
     result
   end
+
+
+actor Main
+  new create(env: Env) =>
+    try
+      let args = env.args
+      let n = args(1)?.i64()?
+      let k = args(2)?.i64()?
+      
+      let boss = Boss(n, k, env)
+      env.out.print(n.string()) 
+      env.out.print(k.string())
+      boss.distribute_tasks()
+    else
+      env.out.print("Value of n and k has to be given in arguments") 
+    end
+

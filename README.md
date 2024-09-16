@@ -22,22 +22,21 @@ We have determined the optimal size by the following ways:
    => Too many small tasks led to excessive time and resources for coordination and communication. This is creating a bottleneck situation.
    => With very less work units, some of the workers are being idle leading to slower task completion.
 
-Output for 1000000 26:
+Output for 1000000 24:
 
-<img width="412" alt="Screenshot 2024-09-16 at 4 41 38 PM" src="https://github.com/user-attachments/assets/e5862c0b-4efe-4845-bf8d-13c09e0b6676">
 
-Cores used: Parallelism effective with approx. 7 cores
+Cores used: Parallelism effective with approx. 8 cores
 Real Time: 0.01 seconds
-User Time: 0.07 seconds
+User Time: 0.08 seconds
 System Time: 0.00 seconds
-CPU Time: .07 seconds
-CPU Time to Real Time Ratio: 7.00
+CPU Time: .08 seconds
+CPU Time to Real Time Ratio: 8.00
 Number of Logical CPU Cores: 8
 
 
 Output.txt file:
 
 real time 0.01
-user time 0.07
+user time 0.08
 systime 0.00
 
