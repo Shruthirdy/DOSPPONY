@@ -16,17 +16,23 @@ Github Link:
 
 
 Pony's Actor Model
+
 One design paradigm for creating concurrent systems is the actor model. "Actors" are the basic computational units in this approach. Every actor has a local state of its own and uses message passing to interact with other actors. Because there is no shared state, there are no longer any race situations, deadlocks, or complicated thread synchronization issues that are present in other parallelism models.
 
 The Actor Model: Why Use It?
+
 Concurrency: By utilizing multi-core processors, the actor paradigm enables numerous actors to operate in parallel.
 Message Passing: To maintain thread safety, actors converse using asynchronous messages.
 Isolation: By keeping each actor in their own state, concurrent executions are executed with fewer failures and side effects.
-Performers in This Project
+
+Actors in This Project
+
 We used two primary actor types in this project:
 
 Boss Actor: The "boss" actor handles the overall computation by breaking the problem into smaller sub-problems (or "work units") and assigning these to worker actors.
+
 Worker Actor: Every worker actor has a portion of sub-problems to perform, such as verifying successive numeric sequences inside a specified range. When an employee completes a task, it gives the supervisor the results.
+
 To guarantee ideal parallelism without taxing the system with an excessive number of or insufficient number of jobs, the work units were meticulously adjusted.
 
 Work Unit Size for Performance Tuning
