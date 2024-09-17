@@ -36,6 +36,7 @@ Worker Actor: Every worker actor has a portion of sub-problems to perform, such 
 To guarantee ideal parallelism without taxing the system with an excessive number of or insufficient number of jobs, the work units were meticulously adjusted.
 
 Work Unit Size for Performance Tuning
+
 It was found that eight subproblems per worker request was the ideal work unit size. In order to maximize concurrent execution while minimizing overhead, this balance was discovered by trial and error with various chunk sizes. Excessive communication overhead between the manager and employees was the outcome of too tiny work units, and ineffective parallelism use was the result of too large work units.
 
 
