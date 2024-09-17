@@ -1,3 +1,11 @@
+#Project 1 
+
+Team Members:
+1. Yaswanth Attaluri
+   UFID: 1013 6560
+2. Shruthi Yaramada
+   UFID:
+   
 # Project description
 
 8 sub-problems per worker request has resulted in the better performance for our code implementation.
