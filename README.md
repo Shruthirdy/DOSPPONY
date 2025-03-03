@@ -1,80 +1,132 @@
-#Project 1 
+# 🌟 Impacta - Crowdfunding for Small Causes
 
-Team Members:
-1. Yaswanth Attaluri
+Impacta is a crowdfunding platform designed to help individuals contribute to **meaningful causes**, ensuring transparency and ease of donation.
 
-     UFID: 1013 6560
-3. Shruthi Yaramada
-   
-     UFID: 2649 7222
+## 🚀 Project Overview
 
-Github Link: 
+Impacta connects **donors** with **verified causes**, providing a **seamless donation experience** and real-time tracking of contributions.
 
-# Project description
+### ✨ Features
 
-8 sub-problems per worker request has resulted in the better performance for our code implementation.
+- Secure **User Authentication** (JWT-based)
+- **Role-Based Access Control (RBAC)**
+- **Donation Tracking & Campaign Management**
+- Interactive **Dashboard for Donors**
+- Secure **Backend API with Database Integration**
+
+---
+
+## 💂️ Project Structure
+
+```
+Impacta/
+│── backend/           # Backend API (Go, PostgreSQL)
+│   ├── controllers/   # API Controllers
+│   ├── models/        # Database Models
+│   ├── routes/        # API Routes
+│   ├── middleware/    # Auth & Role-Based Access
+│   ├── config/        # Environment Configurations
+│   ├── migrate/       # Database Migrations
+│   ├── utils/         # Utility functions (JWT, DB)
+│   └── main.go        # Go App Entry Point
+│
+│── frontend/          # Frontend (React, Vite, Ant Design)
+│   ├── src/
+│   │   ├── components/  # Reusable Components
+│   │   ├── pages/       # Page Views (Login, Register, Dashboard, etc.)
+│   │   ├── styles/      # CSS Modules for Scoped Styling
+│   │   ├── App.jsx      # Main React App Component
+│   │   ├── main.jsx     # Entry Point
+│   │   └── vite.config.js  # Vite Configuration
+│
+└── README.md          # Project Documentation
+```
+
+---
+
+## 🛠️ Tech Stack
+
+### **Frontend:**
+
+- **React** (Vite)
+- **Ant Design** (UI Library)
+- **Axios** (API Requests)
+- **CSS Modules** (Scoped Styling)
+
+### **Backend:**
+
+- **Go (Golang)** (Gin Framework)
+- **PostgreSQL** (Database Management)
+- **JWT Authentication** (Secure User Access)
+- **Role-Based Access Control (RBAC)**
+
+---
+
+## 🏠 Setup Instructions
+
+### **Frontend Setup**
+
+```bash
+cd frontend
+npm install
+npm run dev
+```
+
+### **Backend Setup**
+
+```bash
+cd backend
+go mod tidy
+go run main.go
+```
+
+---
+
+## 🏆 Sprint 1 Breakdown
+
+| Issue #            | Task Description                                                 | Assigned To           | Status        |
+| ------------------ | ---------------------------------------------------------------- | --------------------- | ------------- |
+| **Frontend Tasks** |                                                                  |                       |               |
+| S1-F01             | Create the landing page                                          | **Vennela**           | ✅ Completed   |
+| S1-F02             | Implement navigation bar with scrolling                          | **Vennela**           | ✅ Completed   |
+| S1-F03             | Add "Success Stories" section                                    | **Vennela**           | ✅ Completed   |
+| S1-F04             | Modify App.jsx for Home integration                              | **Vennela**           | ✅ Completed   |
+| S1-F05             | Update index.css for UI/UX improvements                          | **Vennela**           | ✅ Completed   |
+| S1-F06             | Adjust package.json, package-lock.json, and vite.config.json     | **Vennela**           | ✅ Completed   |
+| S1-F07             | Integrate mock backend with frontend                             | **Deepthi**           | ✅ Completed   |
+| S1-F08             | Develop and integrate **Login Page (Frontend & Backend)**        | **Deepthi**           | ✅ Completed   |
+| S1-F09             | Develop and integrate **Registration Page (Frontend & Backend)** | **Deepthi**           | ✅ Completed   |
+| S1-F10             | Setup initial **Dashboard Page Skeleton (UI Only)**              | **Deepthi**           | ✅ Completed |
+| **Backend Tasks**  |                                                                  |                       |               |
+| S1-B01             | Setup architecture for Backend                                   | **Shruthi**           | ✅ Completed   |
+| S1-B02             | Create user authentication API (Register & Login)                | **Shruthi**           | ✅ Completed   |
+| S1-B03             | Finalize Database Schema (Users, Campaigns, Donations)           | **Chandan & Shruthi** | ✅ Completed   |
+| S1-B04             | Implement Role-Based Access Control (RBAC)                       | **Chandan**           | ✅ Completed   |
+| S1-B05             | Setup JWT Authentication for Secure API Access                   | **Chandan**           | ✅ Completed   |
+| S1-B06             | **Implement Database Integration & Migration**                   | **Chandan**           | ✅  Completed |
 
 
-Pony's Actor Model
+## 🏆 Sprint 2 Breakdown
 
-One design paradigm for creating concurrent systems is the actor model. "Actors" are the basic computational units in this approach. Every actor has a local state of its own and uses message passing to interact with other actors. Because there is no shared state, there are no longer any race situations, deadlocks, or complicated thread synchronization issues that are present in other parallelism models.
-
-The Actor Model: Why Use It?
-
-Concurrency: By utilizing multi-core processors, the actor paradigm enables numerous actors to operate in parallel.
-Message Passing: To maintain thread safety, actors converse using asynchronous messages.
-Isolation: By keeping each actor in their own state, concurrent executions are executed with fewer failures and side effects.
-
-Actors in This Project
-
-We used two primary actor types in this project:
-
-Boss Actor: The "boss" actor handles the overall computation by breaking the problem into smaller sub-problems (or "work units") and assigning these to worker actors.
-
-Worker Actor: Every worker actor has a portion of sub-problems to perform, such as verifying successive numeric sequences inside a specified range. When an employee completes a task, it gives the supervisor the results.
-
-To guarantee ideal parallelism without taxing the system with an excessive number of or insufficient number of jobs, the work units were meticulously adjusted.
-
-Work Unit Size for Performance Tuning
-
-It was found that eight subproblems per worker request was the ideal work unit size. In order to maximize concurrent execution while minimizing overhead, this balance was discovered by trial and error with various chunk sizes. Excessive communication overhead between the manager and employees was the outcome of too tiny work units, and ineffective parallelism use was the result of too large work units.
+| Issue # | Task Description                                                                                  | Assigned To | Status      |
+|---------|---------------------------------------------------------------------------------------------------|-------------|-------------|
+| **Frontend Tasks** |                                                                                  |             |             |
+| S2-F01  | Integrate updated API endpoints for campaigns, donations, media files, and comments               | Vennela     | In Progress |
+| S2-F02  | Enhance donor dashboard with real-time data and updated UI components                             | Deepthi     | In Progress |
+| **Backend Tasks**  |                                                                                  |             |             |
+| S2-B01  | Update Campaign endpoints with extended fields and donation tracking                             | Chandan     | Completed   |
+| S2-B02  | Enhance Donation endpoints for amount adjustments and status updates                             | Chandan     | Completed   |
+| S2-B03  | Implement Media File endpoints (create, list, bulk delete)                                       | Shruthi     | Completed   |
+| S2-B04  | Develop Comments endpoints (create, list, update, delete)                                        | Shruthi     | Completed   |
 
 
-We have determined the optimal size by the following ways:
+---
 
-1. Testing the code for different work unit size:
-   Code was run for varying size of work unit. For each work unit size, we divided the total number of sub-problems (_n) into chunks and assigned these chunks to workers.
-   
-  Work Unit Calculation: Number of Workers (work_units): It represents the number of workers that will be assigned tasks. If the total number of workers exceeds the total number of elements to process (num), the number of workers is adjusted to match num.
+## 👥 Contributors
 
-  Work Unit Size (chunk_size): It is the chunk of work assigned to each worker. We have calculated it by dividing the total number of elements (num) by the number of workers. 
-  
-  The formula used is:   var chunk_size: I64 = num / work_units.
+- **Vennela** - Frontend Development
+- **Deepthi** - Frontend Development
+- **Chandan** - Backend Development
+- **Shruthi** - Database Development
 
-  Remainder: We have used remainder (obtained when num is divided by work_units) handle the leftover elements that didn't fit evenly into the chunks. (This is done to ensure that all the elements are processed)
-
-2. Comparison of performance for different size:
-   By experimenting with different sizes, we concluded that window size of 600 provided the best performance in terms of execution time, resource utilization, and overall efficiency.
-
-   For extreme cases:
-   => Too many small tasks led to excessive time and resources for coordination and communication. This is creating a bottleneck situation.
-   => With very less work units, some of the workers are being idle leading to slower task completion.
-
-Output for 1000000 24:
-
-
-Cores used: Efficient parallelism, utilizing approximately 8 cores
-Logical CPU Cores: 8
-Real Time in seconds: 0.01
-User Time in seconds: 0.08
-System Time in seconds: 0.00
-Total CPU Time in seconds: .08
-CPU Time to Real Time Ratio: 8.00
-
-
-Output.txt file:
-
-real 0.01
-user 0.08
-sys 0.00
-
+🚀 **Impacta - Empowering Small Causes, One Donation at a Time!**
