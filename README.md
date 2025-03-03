@@ -108,16 +108,24 @@ go run main.go
 
 ## 🏆 Sprint 2 Breakdown
 
-| Issue # | Task Description                                                                                  | Assigned To | Status      |
-|---------|---------------------------------------------------------------------------------------------------|-------------|-------------|
-| **Frontend Tasks** |                                                                                  |             |             |
-| S2-F01  | Integrate updated API endpoints for campaigns, donations, media files, and comments               | Vennela     | In Progress |
-| S2-F02  | Enhance donor dashboard with real-time data and updated UI components                             | Deepthi     | In Progress |
-| **Backend Tasks**  |                                                                                  |             |             |
-| S2-B01  | Update Campaign endpoints with extended fields and donation tracking                             | Chandan     | ✅ Completed   |
-| S2-B02  | Enhance Donation endpoints for amount adjustments and status updates                             | Chandan     | ✅ Completed   |
-| S2-B03  | Implement Media File endpoints (create, list, bulk delete)                                       | Shruthi     | ✅ Completed   |
-| S2-B04  | Develop Comments endpoints (create, list, update, delete)                                        | Shruthi     | ✅ Completed   |
+| Issue # | Task Description                                                                                                  | Assigned To         | Status        |
+|---------|-------------------------------------------------------------------------------------------------------------------|---------------------|---------------|
+| **Frontend Tasks** |                                                                                                  |                     |               |
+| S2-F01  | Integrate updated API endpoints for campaigns, donations, media files, and comments                                | Vennela             | ✅ Completed  |
+| S2-F02  | Enhance donor dashboard with real-time data and updated UI components                                              | Deepthi             | ✅ Completed  |
+| **Backend Tasks**  |                                                                                                  |                     |               |
+| S2-B01  | Implement full CRUD endpoints for Campaign (Create, Read, Update, Delete)                                           | Chandan             | ✅ Completed  |
+| S2-B02  | Update Campaign endpoints with extended fields and real-time donation tracking                                     | Chandan             | ✅ Completed  |
+| S2-B03  | Enhance Donation endpoints for amount adjustments and status updates                                             | Chandan             | ✅ Completed  |
+| S2-B04  | Implement Media File endpoints (create, list, bulk delete)                                                         | Shruthi             | ✅ Completed  |
+| S2-B05  | Develop Comments endpoints (create, list, update, delete)                                                          | Shruthi             | ✅ Completed  |
+| S2-B06  | Create unit tests for User endpoints (Register, Login, Profile, etc.)                                              | Chandan / Shruthi   | ✅ Completed  |
+| S2-B07  | Create unit tests for Campaign endpoints (full CRUD functionality)                                                 | Chandan             | ✅ Completed  |
+| S2-B08  | Create unit tests for Donation endpoints                                                                           | Chandan             | ✅ Completed  |
+| S2-B09  | Create unit tests for Media File endpoints                                                                         | Shruthi             | ✅ Completed  |
+| S2-B10  | Create unit tests for Comments endpoints                                                                           | Shruthi             | ✅ Completed  |
+| S2-B11  | Optimize campaign query filtering and sorting for improved performance                                             | Chandan             | ✅ Completed  |
+| S2-B12  | Improve logging and error handling across backend endpoints                                                          | Chandan / Shruthi   | ✅ Completed  |
 
 ### Sprint 2 Backend Development Summary
 
