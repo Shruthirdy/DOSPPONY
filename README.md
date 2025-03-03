@@ -119,7 +119,7 @@ go run main.go
 | S2-B03  | Implement Media File endpoints (create, list, bulk delete)                                       | Shruthi     | Completed   |
 | S2-B04  | Develop Comments endpoints (create, list, update, delete)                                        | Shruthi     | Completed   |
 
-### Sprint 2 Summary
+### Sprint 2 Backend Development Summary
 
 In Sprint 2, we extended our backend functionality to better support the needs of our crowdfunding platform. We updated the campaign endpoints to include extended fields and donation tracking to provide more comprehensive insights into campaign performance. The donation endpoints were enhanced to allow precise adjustments of donation amounts and status updates, ensuring accurate real-time tracking of contributions.
 
