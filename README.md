@@ -114,10 +114,10 @@ go run main.go
 | S2-F01  | Integrate updated API endpoints for campaigns, donations, media files, and comments               | Vennela     | In Progress |
 | S2-F02  | Enhance donor dashboard with real-time data and updated UI components                             | Deepthi     | In Progress |
 | **Backend Tasks**  |                                                                                  |             |             |
-| S2-B01  | Update Campaign endpoints with extended fields and donation tracking                             | Chandan     | Completed   |
-| S2-B02  | Enhance Donation endpoints for amount adjustments and status updates                             | Chandan     | Completed   |
-| S2-B03  | Implement Media File endpoints (create, list, bulk delete)                                       | Shruthi     | Completed   |
-| S2-B04  | Develop Comments endpoints (create, list, update, delete)                                        | Shruthi     | Completed   |
+| S2-B01  | Update Campaign endpoints with extended fields and donation tracking                             | Chandan     | ✅ Completed   |
+| S2-B02  | Enhance Donation endpoints for amount adjustments and status updates                             | Chandan     | ✅ Completed   |
+| S2-B03  | Implement Media File endpoints (create, list, bulk delete)                                       | Shruthi     | ✅ Completed   |
+| S2-B04  | Develop Comments endpoints (create, list, update, delete)                                        | Shruthi     | ✅ Completed   |
 
 ### Sprint 2 Backend Development Summary
 
