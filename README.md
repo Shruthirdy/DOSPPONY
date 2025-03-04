@@ -6,104 +6,27 @@ Impacta is a crowdfunding platform designed to help individuals contribute to **
 
 Impacta connects **donors** with **verified causes**, providing a **seamless donation experience** and real-time tracking of contributions.
 
-### ✨ Features
+---
 
-- Secure **User Authentication** (JWT-based)
-- **Role-Based Access Control (RBAC)**
-- **Donation Tracking & Campaign Management**
-- Interactive **Dashboard for Donors**
-- Secure **Backend API with Database Integration**
+## 🚀 Project Overview (Sprint 2)
+
+Sprint 2 focused on extending our backend functionality to provide a more robust, dynamic, and transparent experience. Enhancements include full CRUD for campaigns, detailed donation tracking, and new features for media file management and interactive commenting.
 
 ---
 
-## 💂️ Project Structure
+### New Functionalities Added in Sprint 2
 
-```
-Impacta/
-│── backend/           # Backend API (Go, PostgreSQL)
-│   ├── controllers/   # API Controllers
-│   ├── models/        # Database Models
-│   ├── routes/        # API Routes
-│   ├── middleware/    # Auth & Role-Based Access
-│   ├── config/        # Environment Configurations
-│   ├── migrate/       # Database Migrations
-│   ├── utils/         # Utility functions (JWT, DB)
-│   └── main.go        # Go App Entry Point
-│
-│── frontend/          # Frontend (React, Vite, Ant Design)
-│   ├── src/
-│   │   ├── components/  # Reusable Components
-│   │   ├── pages/       # Page Views (Login, Register, Dashboard, etc.)
-│   │   ├── styles/      # CSS Modules for Scoped Styling
-│   │   ├── App.jsx      # Main React App Component
-│   │   ├── main.jsx     # Entry Point
-│   │   └── vite.config.js  # Vite Configuration
-│
-└── README.md          # Project Documentation
-```
+### ✨ Sprint 2 Features
+
+- Full **CRUD for Campaigns** with extended fields and real-time donation tracking  
+- Enhanced **Donation Endpoints** for precise amount adjustments and status updates  
+- **Media Files Management** – Endpoints to upload, list, and bulk delete media files for campaigns  
+- **Comments System** – Endpoints to create, list, update, and delete comments on campaigns  
+- Comprehensive **Unit Testing** for Users, Campaigns, Donations, Media Files, and Comments  
+- Optimized **Query Performance** and improved logging & error handling across the backend API
+
 
 ---
-
-## 🛠️ Tech Stack
-
-### **Frontend:**
-
-- **React** (Vite)
-- **Ant Design** (UI Library)
-- **Axios** (API Requests)
-- **CSS Modules** (Scoped Styling)
-
-### **Backend:**
-
-- **Go (Golang)** (Gin Framework)
-- **PostgreSQL** (Database Management)
-- **JWT Authentication** (Secure User Access)
-- **Role-Based Access Control (RBAC)**
-
----
-
-## 🏠 Setup Instructions
-
-### **Frontend Setup**
-
-```bash
-cd frontend
-npm install
-npm run dev
-```
-
-### **Backend Setup**
-
-```bash
-cd backend
-go mod tidy
-go run main.go
-```
-
----
-
-## 🏆 Sprint 1 Breakdown
-
-| Issue #            | Task Description                                                 | Assigned To           | Status        |
-| ------------------ | ---------------------------------------------------------------- | --------------------- | ------------- |
-| **Frontend Tasks** |                                                                  |                       |               |
-| S1-F01             | Create the landing page                                          | **Vennela**           | ✅ Completed   |
-| S1-F02             | Implement navigation bar with scrolling                          | **Vennela**           | ✅ Completed   |
-| S1-F03             | Add "Success Stories" section                                    | **Vennela**           | ✅ Completed   |
-| S1-F04             | Modify App.jsx for Home integration                              | **Vennela**           | ✅ Completed   |
-| S1-F05             | Update index.css for UI/UX improvements                          | **Vennela**           | ✅ Completed   |
-| S1-F06             | Adjust package.json, package-lock.json, and vite.config.json     | **Vennela**           | ✅ Completed   |
-| S1-F07             | Integrate mock backend with frontend                             | **Deepthi**           | ✅ Completed   |
-| S1-F08             | Develop and integrate **Login Page (Frontend & Backend)**        | **Deepthi**           | ✅ Completed   |
-| S1-F09             | Develop and integrate **Registration Page (Frontend & Backend)** | **Deepthi**           | ✅ Completed   |
-| S1-F10             | Setup initial **Dashboard Page Skeleton (UI Only)**              | **Deepthi**           | ✅ Completed |
-| **Backend Tasks**  |                                                                  |                       |               |
-| S1-B01             | Setup architecture for Backend                                   | **Shruthi**           | ✅ Completed   |
-| S1-B02             | Create user authentication API (Register & Login)                | **Shruthi**           | ✅ Completed   |
-| S1-B03             | Finalize Database Schema (Users, Campaigns, Donations)           | **Chandan & Shruthi** | ✅ Completed   |
-| S1-B04             | Implement Role-Based Access Control (RBAC)                       | **Chandan**           | ✅ Completed   |
-| S1-B05             | Setup JWT Authentication for Secure API Access                   | **Chandan**           | ✅ Completed   |
-| S1-B06             | **Implement Database Integration & Migration**                   | **Chandan**           | ✅  Completed |
 
 
 ## 🏆 Sprint 2 Breakdown
@@ -111,8 +34,18 @@ go run main.go
 | Issue # | Task Description                                                                                                  | Assigned To         | Status        |
 |---------|-------------------------------------------------------------------------------------------------------------------|---------------------|---------------|
 | **Frontend Tasks** |                                                                                                  |                     |               |
-| S2-F01  | Integrate updated API endpoints for campaigns, donations, media files, and comments                                | Vennela             | ✅ Completed  |
-| S2-F02  | Enhance donor dashboard with real-time data and updated UI components                                              | Deepthi             | ✅ Completed  |
+| S2-F01  | Develop and integrate Campaign Creator Dashboard (UI & Functionality)                                              | Vennela             | ✅ Completed  |
+| S2-F02  | Implement campaign statistics section (Total Campaigns, Active Campaigns, Funds Raised)                            | Vennela             | ✅ Completed  |
+| S2-F03  | Design and integrate Donation Cards displaying campaign details                                                    | Vennela             | ✅ Completed  |
+| S2-F04  | Implement Create Campaign button inside the dashboard                                                              | Vennela             | ✅ Completed  |
+| S2-F05  | Implement form fields for Title, Description, Goal, Category, Image Upload, Duration                               | Vennela             | ✅ Completed  |
+| S2-F06  | Integrate API for campaign creation with backend                                                                   | Vennela             | ✅ Completed  |
+| S2-F07  | Develop Impacta Donation Page with campaign details and donor interactions                                         | Deepthi             | ✅ Completed  |
+| S2-F08  | Implement Banner Image, Title, Description, and Funding Metrics in the donation page                               | Deepthi             | ✅ Completed  |
+| S2-F09  | Add Donate Now & Share Buttons for donor engagement                                                                | Deepthi             | ✅ Completed  |
+| S2-F10  | Setup Axios-based API integration for fetching campaign details, media, donations, and comments                    | Deepthi             | ✅ Completed  |
+| S2-F09  | Integrate PayPal Smart Payment Buttons for seamless donation transactions                                          | Deepthi             | ✅ Completed  |
+| S2-F09  | Implement Cloudinary for media storage                                                                             | Vennela             | ✅ Completed  |
 | **Backend Tasks**  |                                                                                                  |                     |               |
 | S2-B01  | Implement full CRUD endpoints for Campaign (Create, Read, Update, Delete)                                           | Chandan             | ✅ Completed  |
 | S2-B02  | Update Campaign endpoints with extended fields and real-time donation tracking                                     | Chandan             | ✅ Completed  |
@@ -129,9 +62,26 @@ go run main.go
 
 ### Sprint 2 Backend Development Summary
 
-In Sprint 2, we extended our backend functionality to better support the needs of our crowdfunding platform. We updated the campaign endpoints to include extended fields and donation tracking to provide more comprehensive insights into campaign performance. The donation endpoints were enhanced to allow precise adjustments of donation amounts and status updates, ensuring accurate real-time tracking of contributions.
+- Extended backend functionality to support the crowdfunding platform.
+- Updated campaign endpoints with extended fields and integrated donation tracking for comprehensive insights.
+- Enhanced donation endpoints to allow precise adjustments of donation amounts and status updates, ensuring accurate real-time tracking.
+- Implemented new endpoints for managing media files, including creation, listing, and bulk deletion.
+- Developed endpoints for the comments system to enable creation, listing, updating, and deletion of comments.
+- Improved role-based access control, streamlining API responses.
+- Enhanced integration with the frontend, providing robust support for dynamic data display.
+- Laid a solid foundation for future feature expansions and overall system scalability.
 
-Additionally, new endpoints for managing media files and comments were implemented. This enables campaign creators to upload, list, and bulk delete media files, and allows donors to interact through a comments system. These improvements, along with enhanced role-based access, have streamlined our API responses and improved the overall integration with the frontend, laying a robust foundation for future feature expansions.
+
+### Frontend Development Summary
+
+Key improvements include:
+
+- **Dynamic Donor Dashboard:** An interactive dashboard that displays real-time campaign statistics, donation data, and campaign details.
+- **Updated API Integration:** Seamless integration of updated API endpoints for campaigns, donations, media files, and comments, ensuring real-time data updates and improved responsiveness.
+- **Enhanced UI Components:** New components such as campaign statistics, donation cards, and interactive elements (e.g., Donate Now & Share buttons) that enrich the overall user interface.
+- **Payment Integration:** Implementation of PayPal Smart Payment Buttons for smooth and secure donation transactions.
+- **Media Management:** Integration of Cloudinary for robust media storage and retrieval, supporting campaign-related images and videos.
+
 
 ---
 
@@ -140,6 +90,13 @@ Additionally, new endpoints for managing media files and comments were implement
 - **Vennela** - Frontend Development
 - **Deepthi** - Frontend Development
 - **Chandan** - Backend Development
-- **Shruthi** - Database Development
+- **Shruthi** - Backend Development
+
+  ## 🎬 Frontend Walkthrough Video
+📽️ Watch the full frontend walkthrough here: [Frontend Walkthrough Video](https://youtu.be/Rl5WHgtAUi4)
+
+## 🎬 Backend Walkthrough Video
+📽️ Watch the full backend walkthrough here: [Backend Walkthrough Video](https://www.youtube.com/watch?v=25DhEfzo-fY)
+
 
 🚀 **Impacta - Empowering Small Causes, One Donation at a Time!**
