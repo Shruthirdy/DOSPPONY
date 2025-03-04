@@ -8,19 +8,6 @@ Impacta is a crowdfunding platform designed to help individuals contribute to **
 
 Sprint 2 focused on extending our backend functionality to provide a more robust, dynamic, and transparent experience. Enhancements include full CRUD for campaigns, detailed donation tracking, and new features for media file management and interactive commenting.
 
----
-
-### New Functionalities Added in Sprint 2
-
-### ✨ Sprint 2 Features
-
-- Full **CRUD for Campaigns** with extended fields and real-time donation tracking  
-- Enhanced **Donation Endpoints** for precise amount adjustments and status updates  
-- **Media Files Management** – Endpoints to upload, list, and bulk delete media files for campaigns  
-- **Comments System** – Endpoints to create, list, update, and delete comments on campaigns  
-- Comprehensive **Unit Testing** for Users, Campaigns, Donations, Media Files, and Comments  
-- Optimized **Query Performance** and improved logging & error handling across the backend API
-
 
 ---
 
