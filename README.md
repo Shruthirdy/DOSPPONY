@@ -64,7 +64,7 @@ Sample Response:
 }
 
 ```
-###Get User Details
+### Get User Details
 **Endpoint:** GET /user
 **Description:** Retrieves details of the logged-in user (protected route).
 
@@ -92,7 +92,7 @@ curl --location 'http://localhost:8080/user' \
 }
 ```
 
-###Update User
+### Update User
 **Endpoint:** PUT /user
 **Description:** Updates the details of the logged-in user (protected route).
 
@@ -125,7 +125,7 @@ curl -X PUT http://localhost:8080/user \
 }
 ```
 
-###Delete User (Admin Only)
+### Delete User (Admin Only)
 **Endpoint:** DELETE /user
 **Description:** Deletes the currently logged-in user (admin privileges required).
 
@@ -145,7 +145,7 @@ curl -X DELETE http://localhost:8080/user \
 }
 ```
 
-###Get All Users (Admin Only)
+### Get All Users (Admin Only)
 **Endpoint:** GET /users
 **Description:** Retrieves a list of all users (admin privileges required).
 
@@ -175,9 +175,9 @@ curl -X GET http://localhost:8080/users \
 }
 ```
 
-##CAMPAIGNS
+## CAMPAIGNS
 
-###Create Campaign
+### Create Campaign
 
 **Endpoint:** POST /campaigns
 **Description:** Creates a new campaign (protected route).
@@ -221,7 +221,7 @@ curl -X POST http://localhost:8080/campaigns \
 ```
 
 
-###Get All Campaigns (Public)
+### Get All Campaigns (Public)
 **Endpoint:** GET /campaigns
 **Description:** Retrieves a list of campaigns with optional filters and sorting.
 
@@ -268,7 +268,7 @@ curl --location 'http://localhost:8080/campaigns?category=education&sort_by=crea
 }
 ```
 
-###Get Single Campaign
+### Get Single Campaign
 
 **Endpoint:** GET /campaigns/detail/:id
 **Description:** Retrieves the details of a single campaign by its ID.
@@ -300,7 +300,7 @@ curl --location 'http://localhost:8080/campaigns/detail/8eb572aa-9b9a-40d1-b4f0-
 }
 ```
 
-###Update Campaign
+### Update Campaign
 
 **Endpoint:** PUT /campaigns/:id
 **Description:** Updates an existing campaign (protected route).
@@ -336,7 +336,7 @@ curl -X PUT http://localhost:8080/campaigns/<CAMPAIGN_ID> \
 }
 ```
 
-###Delete Campaign
+### Delete Campaign
 
 **Endpoint:** DELETE /campaigns/:id
 **Description:** Deletes a campaign (protected route).
@@ -356,9 +356,9 @@ curl -X DELETE http://localhost:8080/campaigns/<CAMPAIGN_ID> \
 }
 ```
 
-##DONATIONS
+## DONATIONS
 
-###Make Donation
+### Make Donation
 
 **Endpoint:** POST /donations
 **Description:** Creates a donation for a campaign. If the donor does not exist, a new donor record is created.
@@ -405,7 +405,7 @@ curl -X POST http://localhost:8080/donations \
 }
 ```
 
-###List Campaign Donations
+### List Campaign Donations
 
 **Endpoint:** GET /campaigns/:id/donations
 **Description:** Retrieves all donations for a given campaign along with donor information.
@@ -438,7 +438,7 @@ curl --location 'http://localhost:8080/campaigns/<CAMPAIGN_UUID>/donations' \
 }
 ```
 
-###List User Donations (Admin Only)
+### List User Donations (Admin Only)
 
 **Endpoint:** GET /user/donations
 **Description:** Retrieves a list of donations (with optional filtering) for an admin user.
@@ -484,7 +484,7 @@ curl -X GET http://localhost:8080/user/donations \
 }
 ```
 
-###Update Donation (Admin Only)
+### Update Donation (Admin Only)
 
 **Endpoint:** PUT /donations/:id
 **Description:** Updates a donation. This endpoint is protected (admin only).
@@ -525,9 +525,9 @@ curl -X PUT http://localhost:8080/donations/<DONATION_ID> \
 ```
 
 
-##MEDIA FILES
+## MEDIA FILES
 
-###Create Media File
+### Create Media File
 
 **Endpoint:** POST /mediafiles
 **Description:** Creates a new media file record (protected; only admin or campaign_creator roles).
@@ -562,7 +562,7 @@ curl --location 'http://localhost:8080/mediafiles' \
 }
 ```
 
-###Get Media File by ID
+### Get Media File by ID
 
 **Endpoint:** GET /mediafiles/:id
 **Description:** Retrieves a media file by its unique ID.
@@ -588,7 +588,7 @@ curl --location 'http://localhost:8080/mediafiles/MEDIAFILE_UUID' \
 }
 ```
 
-###List Media Files by Campaign ID
+### List Media Files by Campaign ID
 
 **Endpoint:** GET /campaigns/:campaign_id/mediafiles
 **Description:** Retrieves a list of media files associated with a specific campaign.
@@ -616,7 +616,7 @@ curl -X GET http://localhost:8080/campaigns/CAMPAIGN_UUID/mediafiles \
 ]
 ```
 
-###List Media Files by User ID
+### List Media Files by User ID
 
 **Endpoint:** GET /users/:user_id/mediafiles
 **Description:** Retrieves media files for campaigns where the specified user is the creator.
@@ -653,7 +653,7 @@ curl -X GET http://localhost:8080/users/USER_UUID/mediafiles \
 ]
 ```
 
-###Bulk Delete Media Files
+### Bulk Delete Media Files
 
 **Endpoint:** DELETE /mediafiles/bulk
 **Description:** Deletes multiple media files specified by their IDs. (Protected; only allowed for admins or campaign owners.)
@@ -681,9 +681,9 @@ curl -X DELETE http://localhost:8080/mediafiles/bulk \
 ```
 
 
-##COMMENTS
+## COMMENTS
 
-###Create Comment
+### Create Comment
 
 **Endpoint:** POST /comments
 **Description:** Creates a new comment on a campaign (protected route; user ID is derived from the JWT).
@@ -717,7 +717,7 @@ curl --location 'http://localhost:8080/comments' \
 }
 ```
 
-###Get Comment by ID
+### Get Comment by ID
 
 **Endpoint:** GET /comments/:id
 **Description:** Retrieves a single comment by its ID.
@@ -743,7 +743,7 @@ curl --location 'http://localhost:8080/comments/a5f03c29-fd44-40e9-b56a-5e2a38c1
 }
 ```
 
-###List Comments by Campaign ID
+### List Comments by Campaign ID
 
 **Endpoint:** GET /campaigns/:campaign_id/comments
 **Description:** Retrieves all comments for a given campaign.
@@ -771,7 +771,7 @@ curl --location 'http://localhost:8080/campaigns/CAMPAIGN_UUID/comments' \
 ]
 ```
 
-###List Comments by User ID
+### List Comments by User ID
 
 **Endpoint:** GET /users/:user_id/comments
 **Description:** Retrieves all comments made by a specific user.
@@ -799,7 +799,7 @@ curl --location 'http://localhost:8080/users/baf60742-f16c-46ff-978d-0c741b2d0fd
 ]
 ```
 
-###Delete Comment
+### Delete Comment
 
 **Endpoint:** DELETE /comments/:id
 **Description:** Deletes a comment (protected route; only the comment owner or an admin can delete).
