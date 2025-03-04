@@ -2,10 +2,6 @@
 
 Impacta is a crowdfunding platform designed to help individuals contribute to **meaningful causes**, ensuring transparency and ease of donation.
 
-## 🚀 Project Overview
-
-Impacta connects **donors** with **verified causes**, providing a **seamless donation experience** and real-time tracking of contributions.
-
 ---
 
 ## 🚀 Project Overview (Sprint 2)
