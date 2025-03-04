@@ -27,8 +27,12 @@ Sprint 2 focused on extending our backend functionality to provide a more robust
 | S2-F08  | Implement Banner Image, Title, Description, and Funding Metrics in the donation page                               | Deepthi             | ✅ Completed  |
 | S2-F09  | Add Donate Now & Share Buttons for donor engagement                                                                | Deepthi             | ✅ Completed  |
 | S2-F10  | Setup Axios-based API integration for fetching campaign details, media, donations, and comments                    | Deepthi             | ✅ Completed  |
-| S2-F09  | Integrate PayPal Smart Payment Buttons for seamless donation transactions                                          | Deepthi             | ✅ Completed  |
-| S2-F09  | Implement Cloudinary for media storage                                                                             | Vennela             | ✅ Completed  |
+| S2-F11  | Integrate PayPal Smart Payment Buttons for seamless donation transactions                                          | Deepthi             | ✅ Completed  |
+| S2-F12  | Implement Cloudinary for media storage                                                                             | Vennela             | ✅ Completed  |
+| S2-F13  | Implement Unit & Cypress Tests for Login Page                                                                      | Deepthi             | ✅ Completed  |
+| S2-F14 | Implement Unit & Cypress Tests for Donor Dashboard                                                                  | Deepthi             | ✅ Completed  |
+| S2-F15  | Implement Unit & Cypress Tests for Register Page                                                                   | Vennela             | ✅ Completed  |
+| S2-F16  | Implement Unit & Cypress Tests for Create Campaign Page                                                            | Vennela             | ✅ Completed  |
 | **Backend Tasks**  |                                                                                                  |                     |               |
 | S2-B01  | Implement full CRUD endpoints for Campaign (Create, Read, Update, Delete)                                           | Chandan             | ✅ Completed  |
 | S2-B02  | Update Campaign endpoints with extended fields and real-time donation tracking                                     | Chandan             | ✅ Completed  |
